@@ -1,0 +1,329 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Oswald', sans-serif;
+}
+/* =======header======== */
+header {
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.99)),
+		url("../images/coffee-shop-zoom-background.jpg")no-repeat center center/cover;
+}
+header .container i.first-icon {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	font-size: 25px;
+	background-color: #9b4804;
+	color: white;
+	padding: 8px 10px 10px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s ease-in-out;
+	z-index: 999;
+}
+header .container i.first-icon:hover {
+	background: #522501;
+	transition: .5s;
+}
+.navbar-light .navbar-toggler {
+	color: #fff;
+	border-color: #fff;
+	opacity: 0.7;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+	background-color: #888;
+}
+nav {
+	background-color: rgba(0, 0, 0, 0.7) !important;
+	text-transform: uppercase;
+	font-family: 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	border-bottom: 3px solid #c98955 !important;
+}
+.navbar a {
+	color: #ffffff !important;
+	opacity: 0.7;
+}
+.navbar a:hover {
+	opacity: 1;
+	background-color: #111111 !important;
+}
+.navbar form input,
+.navbar form .btn {
+	color: #ffffff !important;
+	opacity: 0.7;
+	border: none !important;
+	outline: 0 !important;
+	color: black !important;
+}
+.navbar form .btn {
+	background-color: #c98955;
+}
+.navbar form .btn:hover {
+	background-color: #f78426;
+	color: #fff !important;
+}
+@media (max-width: 768px) {
+	.navbar form input,
+	.navbar form .btn {
+		display: none !important;
+	}
+}
+.banner {
+	position: absolute;
+	top: 50%;
+	left: 50;
+	transform: translate(10%, -50%);
+	width: 80%;
+}
+.heading {
+	animation-name: slide;
+	animation-duration: 2s;
+}
+.main {
+	animation-name: slide;
+	animation-duration: 2s;
+	animation-delay: .5s;
+	animation-fill-mode: backwards;
+}
+@keyframes slide {
+	0% {
+		transform: translateX(-1000px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+/* =======end of header======== */
+/* start about us */
+#about {
+	background-color: #000;
+	color: #dbc1ac;
+	margin-top: 30px;
+}
+#about a {
+	color: #fff;
+	border: 2px solid #634832;
+}
+.hvr-right {
+	display: inline-block;
+	vertical-align: middle;
+	transition-duration: 0.5s;
+	transform: perspective(1px)translateZ(0);
+	box-shadow: 0 0 1px rgb(0, 0, 0);
+	position: relative;
+}
+.hvr-right:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #dbc1ac;
+	transition-timing-function: ease-in-out;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	transition-property: transform;
+	transition-duration: 0.5s;
+}
+.hvr-right:hover,
+.hvr-right:focus,
+.hvr-right:active {
+	color: #000 !important;
+}
+.hvr-right:hover:before,
+.hvr-right:focus:before,
+.hvr-right:active:before {
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	transform: scaleX(1);
+}
+
+#about .text {
+	font-size: 28px;
+}
+#about about-images {
+	position: relative;
+}
+#about .about-img {
+	position: absolute;
+	width: 150px;
+	height: 130px;
+	opacity: 0.9;
+	transition: all 2s ease;
+}
+#about .img-1 {
+	left: 0;
+	top: 0;
+}
+#about .img-2 {
+	left: 20%;
+	top: 20%;
+	z-index: 22;
+}
+#about .img-3 {
+	left: 40%;
+	top: 45%;
+	z-index: 20;
+}
+#about .img-4 {
+	left: 40%;
+	top: 0%;
+}
+#about .img-5 {
+	left: 0%;
+	top: 45%;
+}
+#about .about-img:hover {
+	transform: scale(1.3) rotate(10deg);
+	z-index: 30;
+	opacity: 1;
+}
+#about .about-img:not(:hover) {
+	opacity: 0.8;
+}
+/* end about us */
+/* tab section */
+.tab {
+	background-image: linear-gradient(to right, #180b01, #64574c);
+}
+/* .content-4 li.nav-tabs a {
+	border: none;
+	margin: 2px;
+	border-bottom: 0;
+	text-align: center;
+	cursor: pointer;
+	background: #9b4804 !important;
+	border: none !important;
+	border-radius: 2px;
+} */
+.tab a.btn {
+	color: #fff;
+	border: 2px solid #634832;
+	border: none !important;
+	outline: 0;
+	border-bottom: 0;
+}
+.tab a.btn:focus,
+.tab a.btn:focus {
+	outline: 0;
+	border: 2px solid #634832;
+	color: #000;
+	background-color: #634832;
+}
+.content-4 h4,
+.content-4 p {
+	color: #fff;
+}
+/* end of tab section */
+/* liked section */
+.most-liked {
+	background-image: linear-gradient(to top left, #64574c, #180b01);
+	position: relative;
+	margin-top: 25px;
+}
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.7;
+}
+.bg-video {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.coffee-card {
+	position: relative;
+	box-shadow: 5px 15px 50px #9b4804;
+	max-width: 420px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all 1s linear;
+	transform-style: preserve-3d;
+}
+/* .rotate {
+	perspective: 100rem;
+} */
+.text-color {
+	color: #fff;
+}
+/*end liked section */
+/* contact  */
+.contact {
+	background-image: linear-gradient(to top left, #64574c, #f1eeeb);
+}
+input[type=text] {
+	width: 100%;
+	border: 2px solid #180b01;
+	border-radius: 4px;
+	margin: 8px 0;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: .3s;
+}
+input[type=text],
+iframe {
+	border-color: #f78426;
+	box-shadow: 0 0 8px #f78426;
+}
+@media (max-width: 768px) {
+	iframe {
+		width: 100% !important;
+	}
+}
+.contact form button {
+	background-color: #f78426 !important;
+	color: #fff !important;
+	width: 100%;
+	text-align: center;
+}
+.contact form button:focus,
+.contact form button:hover {
+	background-color: #522501 !important;
+}
+.WithIcon {
+	position: relative;
+}
+.WithIcon i {
+	position: absolute;
+	left: 0;
+	top: 8px;
+	padding: 8px 8px;
+	color: #f78426;
+	transition: .3s;
+}
+.WithIcon input[type=text]:focus + i {
+	color: #522501;
+}
+.WithIcon input[type=text]:focus {
+	border: 2px solid #180b01;
+}
+.WithIcon input[type=text] {
+	padding-left: 50px;
+}
+/* end contact */
+footer {
+	background-image: linear-gradient(to top left, #2b1502, #0e0d0d);
+	color: #fff;
+}
+footer h4 {
+	letter-spacing: 4px;
+}
+footer i {
+	cursor: pointer;
+}
+footer i:hover {
+	color: #f78426;
+}
